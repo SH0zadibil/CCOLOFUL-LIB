@@ -1,9 +1,8 @@
 #include <stdio.h>
-#include "ccolorful.h"
 
 int main() {
-    enum ansi_color clr = ST_RED;
-    STRprintfcol("some MESSAGE LOL");
+    printf("\033[38;5;196;48;5;17mHello\033[0m\n");
+
 
     return 0;
 }

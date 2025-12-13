@@ -1,18 +1,12 @@
-#ifndef CCOLOR_H
-#define CCOLOR_H
+#ifndef CCOLORFUL_H
+#define CCOLORFUL_H
 
-#include <stdio.h>
-#include <stdlib.h>
+/*
+    THIS IS A HEADER FILE FOR C COLORFUL LIBRARY
+    INCLUDE THIS FILE IN YOUR PROJECT TO USE WHOLE LIBRARY
+*/
 
-extern const enum ansi_color;
-extern const enum ansi_style;
+#include "lib/methods.h"
+#include "lib/constants.h"
 
-#ifdef _WIN32
-	#include <windows.h>
-#else
-	#define ansi_RESETCOL "\e[0m"
-
-	extern void STRprintfcol(char* src, enum ansi_color clr);
-	extern char* getColor(unsigned short int CODE);
-#endif
 #endif
