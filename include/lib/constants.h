@@ -3,8 +3,8 @@
 
 typedef unsigned char COLOR; // 0 - 255
 typedef enum {
-    FOREGROUND,
-    BACKGROUND
+    FOREGROUND = 1,
+    BACKGROUND = 2
 } COLOR_PURPOSE;
 
 typedef enum {
@@ -22,14 +22,15 @@ typedef enum {
 
 #define RESET_CLR "\e[0m"
 
-#define ST_RED(purpose) (purpose = FOREGROUND) ? 31 
-#define ST_GREEN   (COLOR)32
-#define ST_YELLOW  (COLOR)33
-#define ST_BLUE    (COLOR)34
-#define ST_MAGENTA (COLOR)35
-#define ST_CYAN    (COLOR)36
-#define ST_WHITE   (COLOR)37
+#define ST_BLACK(purpose)   (purpose == 1) ? (COLOR)30 : (purpose == 2) ? (COLOR)90 : NULL
+#define ST_RED(purpose)     (purpose == 1) ? (COLOR)31 : (purpose == 2) ? (COLOR)91 : NULL
+#define ST_GREEN(purpose)   (purpose == 1) ? (COLOR)32 : (purpose == 2) ? (COLOR)92 : NULL
+#define ST_YELLOW(purpose)  (purpose == 1) ? (COLOR)33 : (purpose == 2) ? (COLOR)93 : NULL
+#define ST_BLUE(purpose)    (purpose == 1) ? (COLOR)34 : (purpose == 2) ? (COLOR)94 : NULL
+#define ST_MAGENTA(purpose) (purpose == 1) ? (COLOR)35 : (purpose == 2) ? (COLOR)95 : NULL // aka purple color
+#define ST_CYAN(purpose)    (purpose == 1) ? (COLOR)36 : (purpose == 2) ? (COLOR)96 : NULL
+#define ST_WHITE(purpose)   (purpose == 1) ? (COLOR)37 : (purpose == 2) ? (COLOR)97 : NULL
 
-#define ST_BRIGHT_RED     (COLOR)91
+// #define ST_RBG(purpose, r,g,b) ...
 
 #endif

@@ -12,7 +12,10 @@
 
 	#include "constants.h"
 	
-	extern void STRprintfcol(char* src, COLOR clr, STYLE styles[9]);
+	extern void STRprintfcol(char* src, COLOR clr);
+	extern COLOR getRGB(unsigned char R,
+						unsigned char G,
+						unsigned char B);
 
 #endif
 #endif

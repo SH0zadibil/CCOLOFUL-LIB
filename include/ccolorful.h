@@ -6,6 +6,8 @@
     INCLUDE THIS FILE IN YOUR PROJECT TO USE WHOLE LIBRARY
 */
 
+#include <stdlib.h>
+
 #include "lib/methods.h"
 #include "lib/constants.h"
 
